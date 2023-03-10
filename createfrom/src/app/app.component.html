@@ -1,0 +1,9 @@
+<h1>parent</h1>
+
+<label for="">First Name:</label>
+<input type="text" (keyup)="0" #name>
+
+<label for="">DOB :</label>
+<input type="text" (keyup)="0" #dob>
+
+<app-child [name]="name.value" [dob]="dob.value"></app-child>
