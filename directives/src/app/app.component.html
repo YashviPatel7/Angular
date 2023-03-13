@@ -1,0 +1,66 @@
+<table width="100%">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Action</th>
+    </thead>
+    <tbody [class.tdtext]="tdtext">
+        <tr *ngFor="let item of emp">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.deptment}}</td>
+            <td>{{item.salary}}</td>
+            <td *ngIf="item.isdeptment"><button>add</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div *ngFor="let item of days">
+    <input type="radio" [(ngModel)]="day" [value]="item" name="day">
+    <label for="">{{item}}</label>
+</div>
+<div [ngSwitch]="day">
+    <div *ngSwitchCase="'Sunday'">
+        <h3>Today is Sunday</h3>
+    </div>
+    <div *ngSwitchCase="'Monday'">
+        <h3>Today is Monday</h3>
+    </div>
+    <div *ngSwitchCase="'Tuesday'">
+        <h3>Today is Tuesday</h3>
+    </div>
+    <div *ngSwitchCase="'Wednesday'">
+        <h3>Today is Wednesday</h3>
+    </div>
+    <div *ngSwitchCase="'Thursday'">
+        <h3>Today is Thursday</h3>
+    </div>
+    <div *ngSwitchCase="'Friday'">
+        <h3>Today is Friday</h3>
+    </div>
+    <div *ngSwitchCase="'Saturday'">
+        <h3>Today is saturday</h3>
+    </div>
+    <div *ngSwitchDefault="''">
+        <h3>Please select day</h3>
+    </div>
+</div>
+<br><br>
+<div *ngFor="let p of products">
+    <div [ngStyle]="{backgroundColor :p.available==='Available' ? '#D5F5E3' : '#FADBD8'}">
+        <h4>{{p.name}}</h4>
+        <div>
+            <span [ngStyle]="{color:p.available==='Available' ? 'green' : 'red'}">{{p.available}}</span>
+            <span>{{p.price}}</span>
+            <span>{{p.color}}</span>
+        </div><br>
+    </div>
+</div>
+<br><br>
+<div [ngClass]="{changeBackground:searchValue !=''}">
+    <span><b>Search:</b></span>
+    <input type="text" [(ngModel)]="searchValue">
+    <span *ngIf="searchValue !=''">You searched for"{{searchValue}}"</span>
+</div>
