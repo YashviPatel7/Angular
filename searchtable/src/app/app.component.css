@@ -1,0 +1,15 @@
+thead {
+    text-align: center;
+    background-color: rgb(86, 135, 204);
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+tbody {
+    text-align: center;
+    background-color: rgb(236, 244, 248);
+}

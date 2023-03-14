@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <span><b>Search:</b></span>
+    <input type="text" placeholder="Search..." style="width: 450px;padding: 2px 20px;margin:10px 0px;height: 30px;"
+      [(ngModel)]="filterText">
+  </div>
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Course</th>
+      <th>DOB</th>
+      <th>Gender</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of students | filter:filterText">
+        <td>{{std.name | uppercase}}</td>
+        <td>{{std.course}}</td>
+        <td>{{std.DOB | date:'longDate' | lowercase}}</td>
+        <td>{{std.gender}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
