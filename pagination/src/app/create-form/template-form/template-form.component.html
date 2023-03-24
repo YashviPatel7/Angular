@@ -1,0 +1,33 @@
+<p>template-form works!</p>
+<div class="form">
+    <form #login="ngForm" (ngSubmit)=userLogin(login.value)>
+        <label>FullName:</label>
+        <input required #fname="ngModel" minlength="3" maxlength="10" fname type="text" placeholder="Enter Full Name"
+            name="fullname" ngModel />
+        <span *ngIf="fname.invalid && fname.touched" class="error">Name is not valid</span><br>
+
+        <label>UserName:</label>
+        <input type="text" placeholder="Enter UserName Name" name="username" ngModel />
+
+        <label>Mobile:</label>
+        <input type="text" minlength="8" maxlength="12" #mobile="ngModel" placeholder="Enter Mobile Number"
+            name="mobile" ngModel />
+        <span *ngIf="mobile.invalid && mobile.touched" class="error">Mobile Number is not valid</span><br>
+
+        <label>Email:</label>
+        <input required #email="ngModel" email type="email" placeholder="Enter Email ID " name="useremail" ngModel />
+        <span *ngIf="email.invalid && email.touched" class="error">Email is not valid</span><br>
+
+        <label>Password:</label>
+        <input required maxlength="10" minlength="5" #pass="ngModel" type="password" placeholder="Enter Password"
+            name="password" ngModel />
+        <span *ngIf="pass.invalid && pass.touched" class="error">Password is not valid</span><br>
+
+        <label>Address:</label>
+        <input pattern="[a-zA-Z ]*" type="text" #address="ngModel" placeholder="Enter Your Address" name="address"
+            ngModel />
+        <span *ngIf="address.invalid && address.touched" class="error">Address is not valid</span><br>
+
+        <button type="submit" [disabled]="login.invalid">Submit</button>
+    </form>
+</div>

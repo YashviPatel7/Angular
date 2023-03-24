@@ -1,0 +1,13 @@
+<!-- <ul>
+  <li>User Name | User Id</li>
+  <li *ngFor="let data of collection | pagnate:{itemsPerPage:5, currentPage:p} ">{{data.Name}} | {{data.id}}</li>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</ul> -->
+<header>
+  <app-header></app-header>
+</header>
+<div class="d-flex">
+  <aside class="sidebar"><app-sidebar></app-sidebar></aside>
+  <main class="main-container"><router-outlet></router-outlet></main>
+</div>
+<footer></footer>

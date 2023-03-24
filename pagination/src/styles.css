@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    margin: 10px;
+
+}
+
+.header {
+    background-color: rgb(147, 212, 228);
+}
+
+.items {
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.list {
+    margin: 20px;
+}
+
+.sidebar {
+    background-color: rgb(99, 95, 95);
+    color: white;
+    width: 280px;
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+input.ng-invalid {
+    border-left: 5px solid red;
+}
+
+input.ng-valid {
+    border-left: 5px solid green;
+}
+
+.error {
+    color: red;
+}
+
+input[type=text],
+[type=email],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 420px;
+    margin: 10 auto;
+}

@@ -1,0 +1,19 @@
+<p>customtable works!</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of newdata">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.genre}}</td>
+        </tr>
+    </tbody>
+</table>
+<span *ngFor="let b of btnArr"><button class="btn" (click)="getData($event)" value={{b}}>{{b}}</button></span>
