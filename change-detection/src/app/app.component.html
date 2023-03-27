@@ -1,0 +1,13 @@
+<!-- <router-outlet></router-outlet> -->
+<app-parent></app-parent>
+
+<div class="btn-change-name d-flex">
+  <button type="button" (click)="changeName()" class="btn">Change Name</button>
+  <button type="button" (click)="changeObject()" class="btn">Change Name</button>
+</div>
+
+<div class="details">{{name}}</div>
+<div class="details d-flex">
+  <div>{{details.name}}<br></div>
+  <div>{{details.email}}</div>
+</div>

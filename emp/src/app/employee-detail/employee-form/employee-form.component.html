@@ -1,0 +1,48 @@
+<p>employee-form works!</p>
+
+<div class="form-wrapper padding-30">
+    <div class="contain-header">
+        <button class="btn btn-secondary" type="button">
+            <span class="m-left-10 text-capitalize" routerLink="/employee">back</span>
+        </button>
+    </div>
+    <form class="form-contain" [formGroup]="employeeForm">
+        <div class="border-bottom mb-20">
+            <h1 class="title text-capitalize p-bottom-20">
+                Add Employee
+            </h1>
+        </div>
+        <div class="controls-wrapper">
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="name" class="form-lable text-capitalize">name</label>
+                    <input class="form-controls" formControlName="name" type="text" id="name" />
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="email" class="form-lable text-capitalize">email</label>
+                    <input class="form-controls" formControlName="email" type="text" id="email" />
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="password" class="form-lable text-capitalize">password</label>
+                    <input class="form-controls" formControlName="password" type="text" id="password" />
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="address" class="form-lable text-capitalize">Address</label>
+                    <input class="form-controls" formControlName="address" type="text" id="address" />
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <button class="btn btn-primary margin-right-20" type="submit" (click)="addEmployee()">Submit</button>
+            <button type="button" class="btn btn-secondary ">Cancel</button>
+        </div>
+    </form>
+</div>

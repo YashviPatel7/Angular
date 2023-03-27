@@ -1,0 +1,40 @@
+<p>employee-list works!</p>
+
+<div class="contint-list padding-30">
+    <div class="contain-header">
+        <h1 class="title text-capitalize">
+            employee
+        </h1>
+        <button class="btn btn-primary" type="button">
+            <span>+</span>
+            <span class="m-left-10 text-capitalize" routerLink="add">Add Employee</span>
+        </button>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="table-head text-uppercase">id</th>
+                    <th class="table-head text-uppercase">name</th>
+                    <th class="table-head text-uppercase">email</th>
+                    <th class="table-head text-uppercase">password</th>
+                    <th class="table-head text-uppercase">address</th>
+                    <th class="table-head text-uppercase">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of user">
+                    <td class="table-data">{{i.id}}</td>
+                    <td class="table-data">{{i.name}}</td>
+                    <td class="table-data">{{i.email}}</td>
+                    <td class="table-data">{{i.password}}</td>
+                    <td class="table-data">{{i.address}}</td>
+                    <td class="table-data">
+                        <button type="button" (click)="empDelete(i.id)" class="btn btn-secondary">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
