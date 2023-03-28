@@ -1,0 +1,40 @@
+{
+  "employeedata": [
+    {
+      "id": 1,
+      "name": "yash",
+      "dob": "28/3/23",
+      "salary": 5000
+    },
+    {
+      "id": 2,
+      "name": "ashish",
+      "dob": "30/1/85",
+      "salary": 6000
+    },
+    {
+      "id": 3,
+      "name": "pari",
+      "dob": "9/12/20",
+      "salary": 7000
+    },
+    {
+      "name": "annu",
+      "dob": "2023-03-03",
+      "salary": 49898,
+      "id": 4
+    },
+    {
+      "name": "jiyan",
+      "dob": "2023-03-27",
+      "salary": 5000,
+      "id": 5
+    },
+    {
+      "name": "annu",
+      "dob": "2023-03-30",
+      "salary": 5000,
+      "id": 6
+    }
+  ]
+}

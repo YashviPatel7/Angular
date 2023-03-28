@@ -5,12 +5,16 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:EmployeeListComponent
+    path: '',
+    component: EmployeeListComponent
   },
   {
-    path:'add',
-    component:EmployeeFormComponent
+    path: 'add',
+    component: EmployeeFormComponent
+  },
+  {
+    path: 'list',
+    component: EmployeeListComponent
   }
 ];
 

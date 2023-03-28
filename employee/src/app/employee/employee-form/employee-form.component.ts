@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -7,28 +8,30 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./employee-form.component.css']
 })
 export class EmployeeFormComponent implements OnInit {
-  reactiveForm: FormGroup;
-  // public loginForm!: FormGroup;
-  ngOnInit(): void {
-
-    // this.loginForm = new FormGroup({
-    //   useremail: new FormControl(''),
-    //   password: new FormControl('')
-    // })
-    this.reactiveForm = new FormGroup({
-      firstname: new FormControl(null),
-      lastname: new FormControl(null),
-      email: new FormControl(null),
-      country: new FormControl('india'),
-      gender: new FormControl('male'),
-      hobbies: new FormControl(null),
-      password: new FormControl(null)
+  public employeeRecode!: FormGroup;
+  public postData: any;
+  public empdata: any;
+  constructor(private _employeeService: EmployeeService) {
+    // console.log("sssssssssss",this.employeeForm)
+    this.employeeRecode = new FormGroup({
+      name: new FormControl(null, Validators.required),
+      // gender: new FormControl(null, Validators.required),
+      // male: new FormControl(null, Validators.required),
+      // female: new FormControl(null, Validators.required),
+      dob: new FormControl(null, Validators.required),
+      salary: new FormControl(null, Validators.required),
     })
   }
 
-  onSubmit() {
-    console.warn(this.reactiveForm);
+  ngOnInit(): void {
+
+  }
+  addEmployee() {
+
+    this._employeeService.addEmp(this.employeeRecode.value).subscribe((res: any) =>
+      this.postData = res);
+    console.log("ss", this.employeeRecode.value);
+    this._employeeService.getEmployeeData().subscribe();
   }
 
 }
-

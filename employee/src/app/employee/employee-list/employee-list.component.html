@@ -1,2 +1,25 @@
 <p>employee-list works!</p>
-<button>add</button>
+<div class="table-wrapper">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="table-head text-uppercase">id</th>
+                <th class="table-head text-uppercase">name</th>
+                <th class="table-head text-uppercase">DOB</th>
+                <th class="table-head text-uppercase">salary</th>
+                <th class="table-head text-uppercase">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of empdata">
+                <td class="table-data">{{i.id}}</td>
+                <td class="table-data">{{i.name}}</td>
+                <td class="table-data">{{i.dob}}</td>
+                <td class="table-data">{{i.salary}}</td>
+                <td class="table-data">
+                    <button type="button" (click)="empDelete(i.id)" class="btn btn-secondary">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

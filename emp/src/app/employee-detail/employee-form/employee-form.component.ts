@@ -8,7 +8,7 @@ import { EmployeeDetailService } from '../employee-detail.service';
   styleUrls: ['./employee-form.component.css']
 })
 export class EmployeeFormComponent implements OnInit {
-
+  public employeeForm!: FormGroup;
   constructor(private _employeeDetailService: EmployeeDetailService) {
     // console.log("sssssssssss",this.employeeForm)
     this.employeeForm = new FormGroup({
@@ -26,7 +26,7 @@ export class EmployeeFormComponent implements OnInit {
     this._employeeDetailService.employeeAdd(this.employeeForm);
     console.log("ss", this.employeeForm.value)
   }
-  public employeeForm!: FormGroup;
+
 
 
 }

@@ -6,7 +6,7 @@
             <span class="m-left-10 text-capitalize" routerLink="/employee">back</span>
         </button>
     </div>
-    <form class="form-contain" [formGroup]="employeeForm">
+    <form class="form-contain" [formGroup]="employeeForm" (submit)="onSubmit()">
         <div class="border-bottom mb-20">
             <h1 class="title text-capitalize p-bottom-20">
                 Add Employee
@@ -41,7 +41,7 @@
 
         </div>
         <div>
-            <button class="btn btn-primary margin-right-20" type="submit" (click)="addEmployee()">Submit</button>
+            <button class="btn btn-primary margin-right-20" type="submit">Submit</button>
             <button type="button" class="btn btn-secondary ">Cancel</button>
         </div>
     </form>

@@ -56,8 +56,17 @@ export class EmployeeDetailService implements OnInit {
     // return JSON.parse(this.returnEmpData);
   }
 
-  employeeAdd(body: any) {
-    // return this._http.post(this.URL, body)
+  employeeAdd(data: any) {
+    this.returnEmpData = localStorage.getItem('selectKey');
+
+
+    this.objdata = JSON.parse(this.returnEmpData);
+
+
+    this.objdata.push(data)
+    localStorage.setItem('selectKey', JSON.stringify(this.objdata));
+
+
   }
 
 }
