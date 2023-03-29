@@ -1,0 +1,68 @@
+{
+  "product": [
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 1
+    },
+    {
+      "name": "RAM",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 2
+    },
+    {
+      "name": "Hard drive",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 3
+    },
+    {
+      "name": "computer",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 4
+    },
+    {
+      "name": "computer",
+      "stock": "instock",
+      "price": "4000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 5
+    },
+    {
+      "name": "RAM",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 6
+    },
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 7
+    },
+    {
+      "name": "RAM",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 8
+    }
+  ]
+}

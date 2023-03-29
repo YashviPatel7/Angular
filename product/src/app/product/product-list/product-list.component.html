@@ -1,0 +1,43 @@
+<!-- <p>product-list works!</p> -->
+<div class="contint-list padding-30">
+    <div class="contain-header">
+        <h1 class="title text-capitalize">
+            product
+        </h1>
+        <button class="btn btn-primary" type="button">
+            <span>+</span>
+            <span class="m-left-10 text-capitalize" routerLink="/add">Add Employee</span>
+        </button>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="table-head text-uppercase">id</th>
+                    <th class="table-head text-uppercase">name</th>
+                    <th class="table-head text-uppercase">stock</th>
+                    <th class="table-head text-uppercase">price</th>
+                    <th class="table-head text-uppercase">brands</th>
+                    <th class="table-head text-uppercase">color</th>
+                    <th class="table-head text-uppercase">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of product">
+                    <td class="table-data">{{i.id}}</td>
+                    <td class="table-data">{{i.name}}</td>
+                    <td class="table-data">{{i.stock}}</td>
+                    <td class="table-data">{{i.price}}</td>
+                    <td class="table-data">{{i.brands}}</td>
+                    <td class="table-data">{{i.color}}</td>
+                    <td class="table-data">
+                        <button type="button" class="btn btn-delete" (click)="productDelete(i.id)">Delete</button>
+                        <button type="button" class="btn btn-edit m-left-10" routerLink="/update/{{i.id}}">Edit</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
