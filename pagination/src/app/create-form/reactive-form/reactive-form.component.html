@@ -1,40 +1,114 @@
 <p>reactive-form works!</p>
-<div class="form">
-    <h2 id="registration">Registration</h2>
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" placeholder="your name.." formControlName="firstname">
+<div class="controls-wrapper col-width">
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" placeholder="your last name.." formControlName="lastname">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" class="form-contain">
+        <h2 id="registration">Registration</h2>
+        <div class="controls-wrapper">
+            <div formGroupName="personalDetails" class="controls-wrapper">
+                <div class="mb-20 controls-contain">
+                    <div class="margin-right-20 controls">
+                        <label for="fname" class="form-lable text-capitalize">First Name</label>
+                        <input type="text" id="fname" class="form-controls" placeholder="your name.."
+                            formControlName="firstname">
+                        <span class="text-danger"
+                            *ngIf="!reactiveForm.get('personalDetails.firstname')?.valid && reactiveForm.get('personalDetails.firstname')?.touched ">please
+                            enter
+                            name</span>
+                    </div>
+                </div>
+                <div class="mb-20 controls-contain">
+                    <div class="margin-right-20 controls">
+                        <label for="lname" class="form-lable text-capitalize">Last Name</label>
+                        <input type="text" class="form-controls" id="lname" placeholder="your last name.."
+                            formControlName="lastname">
+                        <span class="text-danger"
+                            *ngIf="!reactiveForm.get('personalDetails.lastname')?.valid && reactiveForm.get('personalDetails.lastname')?.touched ">please
+                            enter
+                            name</span>
+                    </div>
+                </div>
+                <div class="mb-20 controls-contain">
+                    <div class="margin-right-20 controls">
+                        <label for="email" class="form-lable text-capitalize">Email:</label>
+                        <input type="email" id="email" class="form-controls" placeholder="Enter Email ID "
+                            name="useremail" formControlName="email" />
+                        <span class="text-danger"
+                            *ngIf="reactiveForm.get('personalDetails.email')?.errors?.['pattern'] && reactiveForm.get('personalDetails.email')?.touched ">please
+                            enter
+                            valid
+                            email address
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="reactiveForm.get('personalDetails.email')?.errors?.['required'] && reactiveForm.get('personalDetails.email')?.touched ">required</span>
+                    </div>
+                </div>
+                <div class="mb-20 controls-contain">
+                    <div class="margin-right-20 controls">
+                        <label class="form-lable text-capitalize">Password:</label>
+                        <input type="password" placeholder="Enter Password" formControlName="password" name="password"
+                            class="form-controls" />
+                        <span class="text-danger"
+                            *ngIf="!reactiveForm.get('personalDetails.password')?.valid && reactiveForm.get('personalDetails.password')?.touched ">Password
+                            length should mimimum 6 characters
+                        </span>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter Email ID " name="useremail" formControlName="email" />
+                    </div>
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="country" class="form-lable text-capitalize">Country</label>
+                    <select id="country" formControlName="country" class="form-controls">
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label for="gender" class="form-lable text-capitalize">Gender</label>
+                    <input type="radio" id="male" value="male" formControlName="gender">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" value="female" formControlName="gender">
+                    <label for="female">Female</label>
+                    <br>
+                </div>
+            </div>
+            <div class="mb-20 controls-contain">
+                <div class="margin-right-20 controls">
+                    <label class="form-lable text-capitalize">Hobbies<i>(Optional)</i></label>
+                    <div class="form-inline">
+                        <label><input type="checkbox" value="sports" formControlName="hobbies"
+                                class="form-controls">Sports</label>
+                        <label><input type="checkbox" value="movies" formControlName="hobbies"
+                                class="form-controls">Movies</label>
+                        <label><input type="checkbox" value="music" formControlName="hobbies"
+                                class="form-controls">Music</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-20 controls-contain" formArrayName="skills">
 
-        <label for="country">Country</label>
-        <select id="country" formControlName="country">
-            <option value="india">India</option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-        </select>
+                <div class="margin-right-20 controls">
+                    <ng-container *ngFor="let skill of reactiveForm.get('skills')['controls'];index as i">
+                        <label for="skill" class="form-lable text-capitalize">Skills</label>
+                        <input type="text" class="form-controls" id="skill" placeholder="add skills.."
+                            formControlName="{{i}}">
+                        <span class="text-danger"
+                            *ngIf="!reactiveForm.get('skills')?.valid && reactiveForm.get('skills')?.touched ">please
+                            enter
+                            skills</span>
+                    </ng-container>
+                    <button type="button" class="btn btn-primary" (click)="addSkills()" [disabled]="disableAdd()">+ Add
+                        Skills</button>
+                    <!-- <button type="button" class="btn btn-primary" (click)="removeSkills(id)">+ Remove Skills</button> -->
+                </div>
 
-        <label for="gender">Gender</label>
-        <input type="radio" id="male" value="male" formControlName="gender">
-        <label for="male">Male</label>
-        <input type="radio" id="female" value="female" formControlName="gender">
-        <label for="female">Female</label>
-        <br>
+            </div>
 
-        <label>Hobbies<i>(Optional)</i></label>
-        <div class="form-inline">
-            <label><input type="checkbox" value="sports" formControlName="hobbies">Sports</label>
-            <label><input type="checkbox" value="movies" formControlName="hobbies">Movies</label>
-            <label><input type="checkbox" value="music" formControlName="hobbies">Music</label>
+            <input class="btn btn-primary" type="submit" value="Submit" id="btnSubmit">
         </div>
-
-        <label>Password:</label>
-        <input type="password" placeholder="Enter Password" formControlName="password" name="password" />
-        <input type="submit" value="Submit" id="btnSubmit">
     </form>
 </div>

@@ -4,37 +4,57 @@
       "id": 1,
       "name": "yash",
       "dob": "28/3/23",
+      "gender": "male",
       "salary": 5000
     },
     {
       "id": 2,
       "name": "ashish",
       "dob": "30/1/85",
+      "gender": "male",
       "salary": 6000
     },
     {
       "id": 3,
       "name": "pari",
       "dob": "9/12/20",
+      "gender": "male",
       "salary": 7000
     },
     {
       "name": "annu",
       "dob": "2023-03-03",
+      "gender": "male",
       "salary": 49898,
       "id": 4
     },
     {
       "name": "jiyan",
       "dob": "2023-03-27",
+      "gender": "male",
       "salary": 5000,
       "id": 5
     },
     {
+      "name": "pari",
+      "dob": "2023-03-27",
+      "gender": "male",
+      "salary": 30000,
+      "id": 7
+    },
+    {
+      "name": "jiyan",
+      "dob": "2023-03-12",
+      "gender": "male",
+      "salary": 9000,
+      "id": 8
+    },
+    {
       "name": "annu",
-      "dob": "2023-03-30",
+      "gender": "female",
+      "dob": "2023-03-14",
       "salary": 5000,
-      "id": 6
+      "id": 9
     }
   ]
 }

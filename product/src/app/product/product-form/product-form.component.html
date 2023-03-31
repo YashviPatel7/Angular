@@ -6,12 +6,13 @@
         </button>
     </div>
     <div *ngIf="alert" class="alert" role="alert">
-        <strong>Success ! </strong> Your data Updated successfully !.
+        <strong>Success ! </strong> Your data {{mag}} successfully !.
         <button type="button" (click)="closeAlert()" class="close" data-bs-dismiss="alert" aria-label="close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <form class="form-contain" [formGroup]="productForm">
+
+    <form class="form-contain" [formGroup]="productForm" (ngSubmit)="changeFunction ? addProduct() : EditProduct()">
         <div class="border-bottom mb-20">
             <h1 class="title text-capitalize p-bottom-20">
                 Add Product
@@ -52,8 +53,9 @@
 
         </div>
         <div>
-            <button class="btn btn-primary margin-right-20" type="submit" (click)="addProduct()">Submit</button>
-            <button class="btn btn-primary margin-right-20" type="button" (click)="EditProduct()">Update</button>
+            <button class="btn btn-primary margin-right-20" type="submit"
+                [disabled]="!productForm.valid">{{btnText}}</button>
+            <!-- <button class="btn btn-primary margin-right-20" type="button" (click)="EditProduct()">Update</button> -->
             <!-- <button type="button" class="btn btn-secondary ">Cancel</button> -->
         </div>
     </form>

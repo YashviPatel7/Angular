@@ -15,14 +15,18 @@ export class EmployeeFormComponent implements OnInit {
     // console.log("sssssssssss",this.employeeForm)
     this.employeeRecode = new FormGroup({
       name: new FormControl(null, Validators.required),
-      // gender: new FormControl(null, Validators.required),
+      gender: new FormControl(null, Validators.required),
       // male: new FormControl(null, Validators.required),
       // female: new FormControl(null, Validators.required),
       dob: new FormControl(null, Validators.required),
       salary: new FormControl(null, Validators.required),
     })
   }
-
+  getdata() {
+    this._employeeService.getEmployeeData().subscribe((items => {
+      this.empdata = items;
+    }))
+  }
   ngOnInit(): void {
 
   }
@@ -31,7 +35,7 @@ export class EmployeeFormComponent implements OnInit {
     this._employeeService.addEmp(this.employeeRecode.value).subscribe((res: any) =>
       this.postData = res);
     console.log("ss", this.employeeRecode.value);
-    this._employeeService.getEmployeeData().subscribe();
+    this.getdata();
   }
 
 }

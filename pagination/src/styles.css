@@ -41,8 +41,8 @@ html {
     display: flex;
 }
 
-input.ng-invalid {
-    border-left: 5px solid red;
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
 }
 
 input.ng-valid {
@@ -53,7 +53,7 @@ input.ng-valid {
     color: red;
 }
 
-input[type=text],
+/* input[type=text],
 [type=email],
 select {
     width: 100%;
@@ -74,16 +74,78 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
+} */
 
 input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
+/*form css*/
+.form-contain {
     padding: 20px;
-    width: 420px;
-    margin: 10 auto;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
+
+
+.controls-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-width {
+    width: 50%;
+}
+
+
+.form-controls {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.controls-contain {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.form-lable {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #3512d1;
+    border: 1px solid white;
+
 }
