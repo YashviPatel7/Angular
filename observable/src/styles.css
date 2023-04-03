@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main-content {
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-heading {
+    background-color: #06638a;
+    color: #ffffff;
+    padding: 15px 30px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/*helper classes*/
+.d-flex {
+    display: flex;
+}
