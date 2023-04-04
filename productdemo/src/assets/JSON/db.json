@@ -1,0 +1,156 @@
+{
+  "productdemo": [
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 1
+    },
+    {
+      "name": "RAM",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 2
+    },
+    {
+      "name": "Hard drive",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 3
+    },
+    {
+      "name": "computer",
+      "stock": "instock",
+      "price": "30001",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 4
+    },
+    {
+      "name": "computer",
+      "stock": "instock",
+      "price": "4500",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 5
+    },
+    {
+      "name": "RAM",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 6
+    },
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 7
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "2500",
+      "brands": "ffffffff",
+      "color": "black",
+      "id": 9
+    },
+    {
+      "name": "pari",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 10
+    },
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 13
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 14
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 15
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 16
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 18
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "redd",
+      "id": 19
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 20
+    },
+    {
+      "name": "jiya",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 21
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 23
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "dsgsdg",
+      "color": "black",
+      "id": 25
+    }
+  ]
+}
