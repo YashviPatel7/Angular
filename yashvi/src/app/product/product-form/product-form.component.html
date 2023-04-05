@@ -1,0 +1,54 @@
+<!-- <p>product-form works!</p> -->
+<div class="form bg-white p-20 border form-wraaper">
+    <!-- <div *ngIf="alert" class="alert" role="alert">
+        <strong>Success ! </strong> Your data {{mag}} successfully !.
+        <button type="button" (click)="closeAlert()" class="close" data-bs-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div> -->
+    <!-- changeFunction ? addProduct() : EditProduct() -->
+    <form class="" [formGroup]="productForm" (ngSubmit)="changeFunction ? addProduct() : EditProduct()">
+        <div class="border-bottom mb-20">
+            <h1 class="title text-capitalize p-bottom-20">
+                Add Product
+            </h1>
+        </div>
+        <div class="controls-wrapper">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name" class="form-lable text-capitalize">name</label>
+                    <input class="form-control" formControlName="name" type="text" id="name" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="stock" class="form-lable text-capitalize">stock</label>
+                    <input class="form-control" formControlName="stock" type="text" id="stock" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="price" class="form-lable text-capitalize">price</label>
+                    <input class="form-control" formControlName="price" type="text" id="price" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="brands" class="form-lable text-capitalize">brands</label>
+                    <input class="form-control" formControlName="brands" type="text" id="brands" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="color" class="form-lable text-capitalize">color</label>
+                    <input class="form-control" formControlName="color" type="text" id="color" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary margin-right-20" type="submit"
+                [disabled]="!productForm.valid">{{btnText}}</button>
+            <!-- [disabled]="!productForm.valid">{{btnText}} -->
+            <!-- <button class="btn btn-primary margin-right-20" type="button" (click)="EditProduct()">Update</button> -->
+            <button type="button" class="btn btn-secondary" (click)="formClose()">cancel</button>
+        </div>
+    </form>
+
+</div>
+<div class="overlay"></div>

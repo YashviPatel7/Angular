@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.m-left-10 {
+    margin-left: 10px;
+}
+
+.form {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: .5;
+}
+
+.form-wraaper {
+    position: relative;
+    z-index: 2;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.bg-white {
+    background: white;
+}
+
+.form {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*aleart */
+.alert {
+    padding: 20px;
+    background-color: #a0f5d6;
+    color: rgb(110, 108, 108);
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.close {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #9c9b9c;
+    font-weight: bold;
+    border: 0;
+    color: white;
+}

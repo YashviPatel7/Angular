@@ -1,0 +1,4 @@
+<app-product-form *ngIf="toggle" (cancelEvent)="closeform($event)" [productData]="product" (addevent)="addevent($event)"
+    (updateData)="updateProductdata($event)"></app-product-form>
+<app-product-list (myEvent)="callingEvent($event)" (editEvent)="editEvent($event)" [data]="data1"
+    (deleteEvent)="productDelete($event)"></app-product-list>

@@ -1,0 +1,116 @@
+{
+  "product": [
+    {
+      "name": "computer",
+      "stock": "instock",
+      "price": "4500",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 5
+    },
+    {
+      "name": "ram",
+      "stock": "instock",
+      "price": "25000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 6
+    },
+    {
+      "name": "maya",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 10
+    },
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 13
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 15
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 17
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black and green",
+      "id": 18
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 20
+    },
+    {
+      "name": "CPU",
+      "stock": "instock",
+      "price": "29000",
+      "brands": "evasolo",
+      "color": "natural",
+      "id": 25
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 26
+    },
+    {
+      "name": "vdgdg",
+      "stock": "instock",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "green",
+      "id": 27
+    },
+    {
+      "name": "yashvi",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "redd",
+      "id": 29
+    },
+    {
+      "name": "annu",
+      "stock": "instock",
+      "price": "3000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 31
+    },
+    {
+      "name": "annu",
+      "stock": "ss",
+      "price": "22000",
+      "brands": "jodgd",
+      "color": "black",
+      "id": 32
+    }
+  ]
+}
