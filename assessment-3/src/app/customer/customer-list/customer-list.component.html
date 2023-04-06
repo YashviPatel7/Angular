@@ -1,0 +1,50 @@
+<div class="contint-list padding-30">
+    <div class="contain-header">
+        <div class="btn color-blue padding-8-11">
+            <span class="fa fa-filter"></span>
+            <span class="m-left-10">Status</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Search..." class="search" [(ngModel)]="searchText">
+            <button type="button" class="btn btn-primary m-left-10" (click)="addform()"> Add </button>
+        </div>
+    </div>
+    <!-- Start : table -->
+    <div class="table-wrapper">
+        <table class="table-content">
+            <thead>
+                <tr>
+                    <th class="table-head text-uppercase">#</th>
+                    <th class="table-head text-uppercase">name</th>
+                    <th class="table-head text-uppercase">description</th>
+                    <th class="table-head text-uppercase">status</th>
+                    <th class="table-head text-uppercase">rate</th>
+                    <th class="table-head text-uppercase">balance</th>
+                    <th class="table-head text-uppercase">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of data | search:searchText" class="tablerow">
+                    <td class="td-data">{{i.id}}</td>
+                    <td class="td-data">{{i.name}}</td>
+                    <td class="td-data text-with">{{i.description}}</td>
+                    <td class="td-data">
+                        <span class="open" *ngIf="i.status=='Open'">{{i.status}}</span>
+                        <span class="error" *ngIf="i.status=='Error'">{{i.status}}</span>
+                        <span class="success" *ngIf="i.status=='Success'">{{i.status}}</span>
+                        <span class="inactive" *ngIf="i.status=='Inactive'">{{i.status}}</span>
+                    </td>
+                    <td class="td-data">{{i.rate}}</td>
+                    <td class="td-data">{{i.balance}}</td>
+                    <td class="td-data">
+                        <button type="button" class="fa fa-pencil border-0 color-white"
+                            (click)="customerEditwithid(i.id)"></button>
+                        <button type="button" class="fa fa-trash border-0 color-red m-left-10"
+                            (click)="customerDelete(i.id)"></button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

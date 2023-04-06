@@ -1,0 +1,68 @@
+{
+  "customer": [
+    {
+      "name": "annu4",
+      "description": "instockLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...",
+      "status": "Error",
+      "rate": 2000,
+      "balance": 1000,
+      "id": 7
+    },
+    {
+      "name": "anuuAnn Culhaneu",
+      "description": "instockLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...",
+      "status": "Open",
+      "rate": 2000,
+      "balance": 2000,
+      "id": 8
+    },
+    {
+      "name": "anuuAnn Culhaneu",
+      "description": "instockLorem ipsum dolor sit amet, consectetur . Nulla...",
+      "status": "Open",
+      "rate": 3000,
+      "balance": 100,
+      "id": 12
+    },
+    {
+      "name": "anuuAnn Culhaneu",
+      "description": "instockLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...",
+      "status": "Success",
+      "rate": 2000,
+      "balance": 200,
+      "id": 13
+    },
+    {
+      "name": "annu",
+      "description": "instockLorem ipsum dolor sit amet, consectetur . Nulla...",
+      "status": "Success",
+      "rate": 300,
+      "balance": 2000,
+      "id": 14
+    },
+    {
+      "name": "vdgdg",
+      "description": "instockLorem ipsum dolor sit amet, consectetur . Nulla...",
+      "status": "Error",
+      "rate": 3000,
+      "balance": 2000,
+      "id": 15
+    },
+    {
+      "name": "anuuAnn Culhaneu",
+      "description": "instockLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...",
+      "status": "Inactive",
+      "rate": 2000,
+      "balance": 3000,
+      "id": 16
+    },
+    {
+      "name": "annu3",
+      "description": "instockLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...",
+      "status": "Error",
+      "rate": 3444,
+      "balance": 2000,
+      "id": 17
+    }
+  ]
+}
