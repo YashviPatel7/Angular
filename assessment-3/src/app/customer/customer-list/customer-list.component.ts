@@ -18,6 +18,7 @@ export class CustomerListComponent implements OnInit {
   @Input() data: any;
 
   searchText: any = '';
+  filterText: any;
 
   ngOnInit(): void {
 

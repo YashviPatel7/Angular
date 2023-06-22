@@ -127,30 +127,6 @@
       "brands": "jodgd",
       "color": "black",
       "id": 20
-    },
-    {
-      "name": "jiya",
-      "stock": "instock",
-      "price": "22000",
-      "brands": "jodgd",
-      "color": "black",
-      "id": 21
-    },
-    {
-      "name": "annu",
-      "stock": "instock",
-      "price": "3000",
-      "brands": "jodgd",
-      "color": "black",
-      "id": 23
-    },
-    {
-      "name": "vdgdg",
-      "stock": "instock",
-      "price": "22000",
-      "brands": "dsgsdg",
-      "color": "black",
-      "id": 25
     }
   ]
 }

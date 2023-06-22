@@ -8,6 +8,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerService } from './customer.service';
 import { SearchPipe } from './search.pipe';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SearchPipe } from './search.pipe';
     CustomerComponent,
     CustomerFormComponent,
     CustomerListComponent,
-    SearchPipe
+    SearchPipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,

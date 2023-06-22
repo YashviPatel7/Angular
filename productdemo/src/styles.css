@@ -236,6 +236,10 @@ body {
     flex-direction: column;
 }
 
+.form-wrapper {
+    background-color: #979090;
+}
+
 /*aleart */
 .alert {
     padding: 20px;

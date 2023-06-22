@@ -21,6 +21,35 @@ html {
     height: 100%;
 }
 
+body {
+    overflow: hidden;
+}
+
+app-customer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%
+}
+
+app-customer-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%
+}
+
+.contain-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%
+}
+
+.table-wrapper {
+    overflow: auto;
+}
+
 /*helper classes*/
 .m-left-10 {
     margin-left: 10px;
@@ -73,6 +102,7 @@ html {
 .form-wraaper {
     position: relative;
     z-index: 2;
+    overflow: auto;
     height: 100%;
 }
 
@@ -107,7 +137,7 @@ html {
     padding-left: 10px;
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 20px;
+
 }
 
 .form-lable,
@@ -122,23 +152,16 @@ html {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    padding-bottom: 35px;
 }
 
-.open {
-    color: #4F5AED;
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
 }
 
-.inactive {
-    color: #5A6376
-}
-
-.error {
-    color: #D12953;
-}
-
-.success {
-    color: #14804A;
-}
+/* input.ng-valid {
+    border-left: 5px solid green;
+} */
 
 /*aleart */
 .alert {
@@ -166,7 +189,7 @@ td {
     font-size: var(--fn-14);
     font-weight: var(--fw-400);
     color: var(--gray);
-    padding: 10px;
+    padding: 15px;
     padding-left: 50px;
     text-align: left;
 }
@@ -216,9 +239,44 @@ tr:nth-child(even) {
     align-items: center
 }
 
-.search {
+.search-text {
     padding: 6px 12px;
     margin: 10px 0px;
-    border-radius: 6px;
-    border-color: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.border-background {
+    border-radius: 10px;
+    background-color: #EBF0FA;
+    padding: 1px 10px;
+
+}
+
+.positive {
+    color: #14804A;
+}
+
+.negative {
+    color: #D12953;
+}
+
+.open {
+    color: #4F5AED;
+}
+
+.inactive {
+    color: #5A6376
+}
+
+.error {
+    color: #D12953;
+}
+
+.success {
+    color: #14804A;
 }

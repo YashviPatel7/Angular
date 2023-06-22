@@ -12,10 +12,13 @@ html {
     font-family: sans-serif;
 }
 
+/*helper classes*/
+
 .m-left-10 {
     margin-left: 10px;
 }
 
+/*form classes*/
 .form {
     min-width: 400px;
     max-width: 400px;
@@ -29,6 +32,7 @@ html {
     right: 0;
     background-color: black;
     opacity: .5;
+
 }
 
 .form-wraaper {
@@ -55,6 +59,14 @@ html {
     right: 0;
 }
 
+.inputtxt {
+    height: 32px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-300);
+    text-indent: 20px;
+    padding: 6px 12px;
+}
 
 /*aleart */
 .alert {
@@ -73,4 +85,10 @@ html {
     font-weight: bold;
     border: 0;
     color: white;
+}
+
+.main-product {
+    /* Add the blur effect */
+    filter: blur(5px);
+    /* -webkit-filter: blur(5px); */
 }

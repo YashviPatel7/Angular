@@ -56,8 +56,8 @@ export class CustomerFormComponent {
   public customerForm!: FormGroup;
   constructor(private _customerservice: CustomerService, private router: ActivatedRoute) {
     this.customerForm = new FormGroup({
-      name: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Za-z]{3,25}$/)]),
-      description: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Za-z]{3,150}$/)]),
+      name: new FormControl(null, [Validators.required, Validators.pattern(/^[a-zA-Z]{3,25}$/)]),
+      description: new FormControl(null, [Validators.required, Validators.pattern(/^([a-zA-Z0-9$&+,:;=?@#|'<>.-^*()%!\s]){3,150}$/)]),
       status: new FormControl(null, Validators.required),
       rate: new FormControl(null, Validators.required),
       balance: new FormControl(null, Validators.required)

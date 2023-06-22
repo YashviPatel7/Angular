@@ -11,19 +11,18 @@
             Add Customer
         </h1>
     </div>
-    <form class="p-20 customer-form" [formGroup]="customerForm"
-        (ngSubmit)="changeFunction ? addcustomer() : Editcustomer()">
+    <form class="customer-form" [formGroup]="customerForm" (ngSubmit)="changeFunction ? addcustomer() : Editcustomer()">
 
-        <div class="controls-wrapper">
+        <div class="controls-wrapper p-20">
             <div class="form-row m-bottom-15 ">
                 <label for="name" class="form-lable text-uppercase">name</label>
                 <input class="form-control" formControlName="name" type="text" id="name" placeholder="Enter Name" />
                 <span class="text-danger"
-                    *ngIf="!customerForm.get('name')?.valid && customerForm.get('name')?.touched ">required
+                    *ngIf="!customerForm.get('name')?.valid && customerForm.get('name')?.touched && customerForm.get('name')?.errors?.['required']">required
                 </span>
                 <span class="text-danger"
-                    *ngIf="customerForm.get('name')?.errors?.['pattern'] && customerForm.get('name')?.touched ">please
-                    Length should be minimum 3
+                    *ngIf="!customerForm.get('name')?.valid && customerForm.get('name')?.touched && customerForm.get('name')?.errors?.['pattern']">please
+                    Length should be minimum 3 max 25
                 </span>
             </div>
             <div class="form-row m-bottom-15 ">
@@ -31,11 +30,11 @@
                 <input class="form-control" formControlName="description" type="text" id="descrip"
                     placeholder="Enter description" />
                 <span class="text-danger"
-                    *ngIf="!customerForm.get('description')?.valid && customerForm.get('description')?.touched ">required
+                    *ngIf="!customerForm.get('description')?.valid && customerForm.get('description')?.touched && customerForm.get('description')?.errors?.['required']">required
                 </span>
                 <span class="text-danger"
-                    *ngIf="customerForm.get('description')?.errors?.['pattern'] && customerForm.get('description')?.touched ">please
-                    Length should be minimum 3
+                    *ngIf="!customerForm.get('description')?.valid && customerForm.get('description')?.touched && customerForm.get('description')?.errors?.['pattern']">please
+                    Length should be minimum 3 max 150
                 </span>
             </div>
             <div class="form-row m-bottom-15 ">
